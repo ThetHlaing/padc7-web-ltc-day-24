@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Subscribe</title>
+    </head>
+    <body>
+        <% if(err !== null){ %>
+            <h1>There is a error in the submitted data</h1>
+            <% err.details.forEach( (error) =>{%>
+                <p><%= error.message %></p> 
+            <% }) %>
+        <% } %>
+        <form action="/" method="POST">
+            <input type="email" name="email"/>
+            <button type="submit">Subscribe</button>
+        </form>
+    </body>
+</html>

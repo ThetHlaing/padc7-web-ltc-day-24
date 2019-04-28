@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Info</title>
+    </head>
+    <body>
+       
+        <form action="/" method="POST">
+            <input type="text" name="city"/>
+            <button type="submit">Get Weather Info</button>
+        </form>
+        <% if(data !== null){ %>
+            <h1><%= data.message %></h1>
+        <% } %>
+        
+    </body>
+</html>
